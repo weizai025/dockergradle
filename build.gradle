@@ -20,21 +20,53 @@ repositories {
 }
 
 dependencies {
+    implementation 'junit:junit:4.13.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     implementation('org.springframework.boot:spring-boot-starter-web')
 //    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+    // @see https://spring.io/projects/spring-boot
+    testCompile "org.springframework.boot:spring-boot-starter-test"
 
 }
 
-test {
-    useJUnitPlatform()
-}
+//test {
+//    useJUnitPlatform()
+//}
 
-task dockerRun{
-    group="hello"
-    println(project.name)
-    println(project)
-    println("-------------")
-    println(project.properties.get("configurations"))
+//task dockerRun{
+//    group="hello"
+//    println(project.name)
+//    println(project)
+//    println("-------------")
+//    println(project.properties.get("configurations"))
+//    println("-------------")
+//}
+
+//bootBuildImage {
+//    builder = "mine/java-cnb-builder"
+//    runImage = "mine/java-cnb-run"
+//}
+
+docker {
+    name 'my-app:1.2'
+    //tags 'latest' // deprecated, use 'tag'
+    //tag 'myRegistry', 'my.registry.com/username/my-app:version'
+    dockerfile file('Dockerfile')
+
+    // 从 ${buildDir}/libs 和 ${buildDir}/dist 目录复制所有的 jar 和 tar.gz 文件，
+    // 同时将以 ${project.name}-${project.version} 开头的文件重命名。
+    files "${buildDir}/libs"
+    copySpec.include "*.jar", "*.tar.gz", "*.war"
+    copySpec.rename { String filename ->
+        def fullProjectName = "${project.name}-${project.version}"
+        if (filename.startsWith(fullProjectName))
+            return filename.replace(fullProjectName, "app")
+        return filename
+    }
+    //files tasks.distTar.outputs, 'file1.txt', 'file2.txt'
+    //buildArgs([BUILD_VERSION: 'version'])
+    //labels(['key': 'value'])
+    //pull true
+    noCache true
 }
