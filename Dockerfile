@@ -1,5 +1,5 @@
 FROM openjdk:8-alpine
-LABEL maintainer "724290768@qq.coom"
+LABEL maintainer "724290768@qq.com"
 
 # A timestamp to disable cached files.
 ENV REFRESHED_AT 2018-09-03
