@@ -1,25 +1,52 @@
-plugins {
-    id 'java'
-    id "com.palantir.docker" version "0.27.0"
-    id 'org.springframework.boot' version '2.5.3'
-    id 'maven-publish'
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+            maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+            maven { setUrl("https://maven.aliyun.com/repository/public/") }
+            maven { setUrl("https://maven.aliyun.com/repository/spring/") }
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.22.2"
+    }
 }
 
-apply plugin: 'io.spring.dependency-management'
-apply plugin: 'java'
-
+plugins {
+    id 'java'
+    id 'java-library'
+    id "com.palantir.docker" version "0.27.0"
+    id "com.palantir.docker-run" version "0.27.0"
+    id 'application'
+    id 'org.springframework.boot' version '2.5.3'
+}
 
 group 'org.nju'
-version '1.0-SNAPSHOT'
+version '1.2'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
 repositories {
-    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
-    maven { setUrl("https://maven.aliyun.com/repository/public/") }
-    maven { setUrl("https://maven.aliyun.com/repository/spring/") }
     mavenCentral()
 }
 
+mainClassName = 'com.nju.DockerGradle'
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName
+        )
+    }
+}
+apply plugin: 'io.spring.dependency-management'
 dependencies {
+    //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+
     implementation 'junit:junit:4.13.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     implementation('org.springframework.boot:spring-boot-starter-web')
@@ -27,46 +54,23 @@ dependencies {
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
     // @see https://spring.io/projects/spring-boot
     testCompile "org.springframework.boot:spring-boot-starter-test"
-
 }
 
 //test {
 //    useJUnitPlatform()
 //}
 
-//task dockerRun{
-//    group="hello"
-//    println(project.name)
-//    println(project)
-//    println("-------------")
-//    println(project.properties.get("configurations"))
-//    println("-------------")
-//}
-
-//bootBuildImage {
-//    builder = "mine/java-cnb-builder"
-//    runImage = "mine/java-cnb-run"
-//}
+apply plugin: 'com.palantir.docker'
 
 docker {
-    name 'my-app:1.2'
-    //tags 'latest' // deprecated, use 'tag'
-    //tag 'myRegistry', 'my.registry.com/username/my-app:version'
     dockerfile file('Dockerfile')
+    name 'mawei:1.2'
+    copySpec.from("build/libs").into("build/libs")
+    dependsOn tasks.jar
+}
 
-    // 从 ${buildDir}/libs 和 ${buildDir}/dist 目录复制所有的 jar 和 tar.gz 文件，
-    // 同时将以 ${project.name}-${project.version} 开头的文件重命名。
-    files "${buildDir}/libs"
-    copySpec.include "*.jar", "*.tar.gz", "*.war"
-    copySpec.rename { String filename ->
-        def fullProjectName = "${project.name}-${project.version}"
-        if (filename.startsWith(fullProjectName))
-            return filename.replace(fullProjectName, "app")
-        return filename
-    }
-    //files tasks.distTar.outputs, 'file1.txt', 'file2.txt'
-    //buildArgs([BUILD_VERSION: 'version'])
-    //labels(['key': 'value'])
-    //pull true
-    noCache true
+dockerRun {
+    name 'mawei-1.2-container'
+    image 'mawei:1.2'
+    command 'java', '-Djava.security.egd=file:/dev/./urandom', '-jar', 'app.jar'
 }

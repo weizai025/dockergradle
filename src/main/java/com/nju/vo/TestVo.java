@@ -1,12 +1,20 @@
 package com.nju.vo;
 
 
+import java.time.LocalDateTime;
 
 /**
  * @author maw-b
  * @date 2021/8/4 17:24
  */
 public class TestVo {
+
+    private Integer id;
+
+    private String name;
+
+    private LocalDateTime localDateTime;
+
     public Integer getId() {
         return id;
     }
@@ -23,7 +31,11 @@ public class TestVo {
         this.name = name;
     }
 
-    private Integer id;
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
+    }
 
-    private String name;
+    public void setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
+    }
 }
