@@ -3,22 +3,20 @@ package com.nju;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 /**
  * @author maw-b
  * @date 2021/8/4 17:10
  */
 @SpringBootApplication
-public class DockerGradle {
+public class DockerGradleApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DockerGradle.class, args);
+        SpringApplication.run(DockerGradleApplication.class, args);
         System.out.println("程序启动");
     }
 
     /**
      * [start,end)
+     *
      * @param a
      * @param start
      * @param end

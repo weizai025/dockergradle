@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="docker 修改邮箱">
-      <change afterPath="$PROJECT_DIR$/build1.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dockerrun.gradle" afterDir="false" />
+    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="docker 基本调试成功">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nju/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nju/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nju/vo/TestVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nju/vo/TestVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nju/DockerGradle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nju/DockerGradleApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +155,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -174,8 +169,8 @@
       <recent name="com.nju.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.dockergradle [docker]">
-    <configuration name="dockergradle [dockerClean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.dockergradle [jacocoTestReport]">
+    <configuration name="dockergradle [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -186,7 +181,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="dockerClean" />
+            <option value="check" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,7 +191,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="dockergradle [dockerNetworkModeStatus]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="dockergradle [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -207,7 +202,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="dockerNetworkModeStatus" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -217,7 +212,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="dockergradle [dockerRemoveContainer]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="dockergradle [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -228,7 +223,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="dockerRemoveContainer" />
+            <option value="jacocoTestCoverageVerification" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -238,7 +233,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="dockergradle [dockerStop]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="dockergradle [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -249,7 +244,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="dockerStop" />
+            <option value="jacocoTestReport" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -259,7 +254,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="dockergradle [docker]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="dockergradle [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -270,7 +265,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="docker" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -289,11 +284,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.dockergradle [docker]" />
-        <item itemvalue="Gradle.dockergradle [dockerClean]" />
-        <item itemvalue="Gradle.dockergradle [dockerNetworkModeStatus]" />
-        <item itemvalue="Gradle.dockergradle [dockerRemoveContainer]" />
-        <item itemvalue="Gradle.dockergradle [dockerStop]" />
+        <item itemvalue="Gradle.dockergradle [jacocoTestReport]" />
+        <item itemvalue="Gradle.dockergradle [jacocoTestCoverageVerification]" />
+        <item itemvalue="Gradle.dockergradle [check]" />
+        <item itemvalue="Gradle.dockergradle [clean]" />
+        <item itemvalue="Gradle.dockergradle [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -316,7 +311,7 @@
       <workItem from="1628644296341" duration="558000" />
       <workItem from="1628732503895" duration="1510000" />
       <workItem from="1629082879206" duration="12797000" />
-      <workItem from="1629104214910" duration="12893000" />
+      <workItem from="1629104214910" duration="18300000" />
     </task>
     <task id="LOCAL-00001" summary="docker 初步配置成功">
       <created>1629094535017</created>
@@ -332,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629095906039</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="docker 基本调试成功">
+      <created>1629265400531</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629265400531</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +355,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="docker 初步配置成功" />
     <MESSAGE value="docker 修改邮箱" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker 修改邮箱" />
+    <MESSAGE value="docker 基本调试成功" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker 基本调试成功" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dockergradle$SpringBootApplicationTest.ic" NAME="SpringBootApplicationTest Coverage Results" MODIFIED="1629092884854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

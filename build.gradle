@@ -19,6 +19,7 @@ plugins {
     id "com.palantir.docker-run" version "0.27.0"
     id 'application'
     id 'org.springframework.boot' version '2.5.3'
+    id 'jacoco'
 }
 
 group 'org.nju'
@@ -33,7 +34,7 @@ repositories {
     mavenCentral()
 }
 
-mainClassName = 'com.nju.DockerGradle'
+mainClassName = 'com.nju.DockerGradleApplication'
 
 jar {
     manifest {
@@ -74,3 +75,41 @@ dockerRun {
     image 'mawei:1.2'
     command 'java', '-Djava.security.egd=file:/dev/./urandom', '-jar', 'app.jar'
 }
+
+
+String[] excludes = ['**/config/**','**/vo/**', '**/model/**','**/document/**','**/data/**','**/orm/**','**/enumeration/**','**/*Application.class','**/old/**','**/constant/**','**/controller/**','**/converter/**','**/test/**'  ]
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ['**/controller/**','**/vo/**','**/*Application.class'])
+        }))
+    }
+}
+
+// 设置覆盖度检查的阈值
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = "LINE"
+                minimum = 0.00
+            }
+            limit {
+                counter = "BRANCH"
+                minimum = 0.00
+            }
+        }
+    }
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ['**/controller/**','**/vo/**','**/*Application.class'])
+        }))
+    }
+}
+build.dependsOn jacocoTestCoverageVerification
+check.dependsOn jacocoTestReport
