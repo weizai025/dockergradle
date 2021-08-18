@@ -116,8 +116,8 @@ build.dependsOn jacocoTestCoverageVerification
 check.dependsOn jacocoTestReport
 
 
-
-/*        * @see https://docs.sonarqube.org/display/SCAN/Analyzing+Source+Code
+/*
+/*@see https://docs.sonarqube.org/display/SCAN/Analyzing+Source+Code
 *
 * @param sonar.host.url        服务端 url 地址，扫描数据会发送到这个指定的服务端并进行展示。
 * @param sonar.login           登录使用的 token ，此值需要从指定的服务端上生成。
@@ -132,7 +132,7 @@ check.dependsOn jacocoTestReport
         * 示例：
 * 1. ./gradlew sonarqube -Dsonar.host.url=http://localhost:9000 -Dsonar.login=55284464162a178cde63a184e623004e92538f3b
         *
-        */
+*/
 sonarqube {
     properties {
         property "sonar.sourceEncoding", "UTF-8"
