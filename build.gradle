@@ -20,6 +20,7 @@ plugins {
     id 'application'
     id 'org.springframework.boot' version '2.5.3'
     id 'jacoco'
+    id "org.sonarqube" version "3.3"
 }
 
 group 'org.nju'
@@ -113,3 +114,29 @@ jacocoTestCoverageVerification {
 }
 build.dependsOn jacocoTestCoverageVerification
 check.dependsOn jacocoTestReport
+
+
+
+/*        * @see https://docs.sonarqube.org/display/SCAN/Analyzing+Source+Code
+*
+* @param sonar.host.url        服务端 url 地址，扫描数据会发送到这个指定的服务端并进行展示。
+* @param sonar.login           登录使用的 token ，此值需要从指定的服务端上生成。
+*
+* 以上参数可以通过在 gradle.properties 文件中设定，也可以在命令行中通过 -D 参数设定。
+*
+* 注意事项：
+* 1. 在 gradle.properties 文件中设置参数时，需要添加 systemProp 前缀。例如：
+*    systemProp.sonar.host.url=http://localhost:9000 和
+*    systemProp.sonar.login=[token]
+        *
+        * 示例：
+* 1. ./gradlew sonarqube -Dsonar.host.url=http://localhost:9000 -Dsonar.login=55284464162a178cde63a184e623004e92538f3b
+        *
+        */
+sonarqube {
+    properties {
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.exclusions", "**/config/**/*.java,**/vo/**/*.java, **/model/**/*.java, **/document/**/*.java, **/data/**/*.java,**/orm/**/*.java,**/enumeration/**/*.java,**/*Application.java,**/old/**/*.java,**/controller/**/*.java,**/converter/**/*.java,**/constant/**/*.java, **/test/**/*.java"
+        property "sonar.test.exclusions", "**/*"
+    }
+}
