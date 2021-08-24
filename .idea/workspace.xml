@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="websocket 创建成功">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/show1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nju/config/SessionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nju/config/SessionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java" afterDir="false" />
+    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="websocket 点对点消息发送">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/websocket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +145,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
@@ -159,8 +155,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Code\dockergradle\src\main\resources\static" />
       <recent name="E:\Code\dockergradle\src\main\resources\static\js" />
+      <recent name="E:\Code\dockergradle\src\main\resources\static" />
       <recent name="E:\Code\dockergradle" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -286,10 +282,23 @@
     <configuration name="DockerGradleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="dockergradle.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nju.DockerGradleApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.dockergradle [check]" />
+      <item itemvalue="Gradle.dockergradle [processResources]" />
+      <item itemvalue="Gradle.dockergradle [projects]" />
+      <item itemvalue="Gradle.HelloServiceTest.test" />
+      <item itemvalue="Gradle.HelloServiceTest.test2" />
+      <item itemvalue="Spring Boot.DockerGradle" />
+      <item itemvalue="Spring Boot.DockerGradleApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.dockergradle [projects]" />
@@ -321,7 +330,7 @@
       <workItem from="1629082879206" duration="12797000" />
       <workItem from="1629104214910" duration="28901000" />
       <workItem from="1629681277087" duration="3326000" />
-      <workItem from="1629711275382" duration="7010000" />
+      <workItem from="1629711275382" duration="7214000" />
     </task>
     <task id="LOCAL-00001" summary="docker 初步配置成功">
       <created>1629094535017</created>
@@ -379,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629801221331</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="websocket 点对点消息发送">
+      <created>1629802642736</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629802642736</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +448,8 @@
     <MESSAGE value="sonarqube 配置完成" />
     <MESSAGE value="sonarqube 单元测试练习" />
     <MESSAGE value="websocket 创建成功" />
-    <option name="LAST_COMMIT_MESSAGE" value="websocket 创建成功" />
+    <MESSAGE value="websocket 点对点消息发送" />
+    <option name="LAST_COMMIT_MESSAGE" value="websocket 点对点消息发送" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
