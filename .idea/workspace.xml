@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="sonarqube 配置完成">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="sonarqube 单元测试练习">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nju/config/SessionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/websocket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nju/service/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nju/service/HelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nju/service/HelloServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nju/service/HelloServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +114,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -135,6 +139,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -147,16 +152,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="F:/gbes_server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Code\dockergradle\src\main\resources\static\js" />
       <recent name="E:\Code\dockergradle" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -317,7 +323,7 @@
       <workItem from="1629082879206" duration="12797000" />
       <workItem from="1629104214910" duration="28901000" />
       <workItem from="1629681277087" duration="3326000" />
-      <workItem from="1629711275382" duration="2589000" />
+      <workItem from="1629711275382" duration="5489000" />
     </task>
     <task id="LOCAL-00001" summary="docker 初步配置成功">
       <created>1629094535017</created>
@@ -361,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629283166205</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sonarqube 单元测试练习">
+      <created>1629798274295</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1629798274295</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +425,29 @@
     <MESSAGE value="docker 基本调试成功" />
     <MESSAGE value="jacoco配置完成" />
     <MESSAGE value="sonarqube 配置完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="sonarqube 配置完成" />
+    <MESSAGE value="sonarqube 单元测试练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="sonarqube 单元测试练习" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dockergradle$SpringBootApplicationTest.ic" NAME="SpringBootApplicationTest Coverage Results" MODIFIED="1629092884854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
