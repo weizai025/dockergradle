@@ -32,4 +32,17 @@ public class SessionPool {
             sessionMap.get(sessionId).getAsyncRemote().sendText(message);
         }
     }
+
+    public static String sendMessage(Map<String, Object> params) {
+        String msg = params.get("msg").toString();
+        String fromUserId = params.get("fromUserId").toString();
+
+        String toUserId = params.get("toUserId").toString();
+        msg = String.format("来自用户%s发送给用户%s,消息：%s",  fromUserId, toUserId, msg);
+        Session session = sessionMap.get(toUserId);
+        if(session!=null){
+            session.getAsyncRemote().sendText(msg);
+        }
+        return "发送成功";
+    }
 }
