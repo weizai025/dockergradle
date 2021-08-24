@@ -48,7 +48,17 @@ public class WebSocketConfig {
      */
     @OnMessage
     public void onMessage(String message,Session session){
-        Map<String,Object> params = JSON.parseObject(message, HashMap.class);
-        SessionPool.sendMessage(params);
+        if (message.equalsIgnoreCase("ping")) {
+            try {
+                Map<String, Object> params = new HashMap<String, Object>();
+                params.put("type", "pong");
+                session.getBasicRemote().sendText(JSON.toJSONString(params));
+                System.out.println("应答客户端的消息:" + JSON.toJSONString(params));
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+        } else {
+            SessionPool.sendMessage(message);
+        }
     }
 }

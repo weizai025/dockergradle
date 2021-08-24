@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="websocket 点对点消息发送">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/websocket.js" afterDir="false" />
+    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="websocket 异常重连">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +331,7 @@
       <workItem from="1629082879206" duration="12797000" />
       <workItem from="1629104214910" duration="28901000" />
       <workItem from="1629681277087" duration="3326000" />
-      <workItem from="1629711275382" duration="7214000" />
+      <workItem from="1629711275382" duration="7953000" />
     </task>
     <task id="LOCAL-00001" summary="docker 初步配置成功">
       <created>1629094535017</created>
@@ -395,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629802642736</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="websocket 异常重连">
+      <created>1629802974637</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1629802974637</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,26 +457,12 @@
     <MESSAGE value="sonarqube 单元测试练习" />
     <MESSAGE value="websocket 创建成功" />
     <MESSAGE value="websocket 点对点消息发送" />
-    <option name="LAST_COMMIT_MESSAGE" value="websocket 点对点消息发送" />
+    <MESSAGE value="websocket 异常重连" />
+    <option name="LAST_COMMIT_MESSAGE" value="websocket 异常重连" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nju/config/WebSocketConfig.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/nju/config/SessionPool.java</url>
           <line>42</line>
