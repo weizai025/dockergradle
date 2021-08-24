@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="jacoco配置完成">
+    <list default="true" id="618f8f1f-fd06-4333-b65e-3eff466b8040" name="Default Changelist" comment="sonarqube 配置完成">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nju/service/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nju/service/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/nju/service/HelloServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nju/service/HelloServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,11 +101,6 @@
                 <item name="dockergradle" type="f1a62948:ProjectNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="dockergradle" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -154,7 +152,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="GrepConsole" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -168,8 +166,50 @@
       <recent name="com.nju.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.dockergradle [sonarqube]">
-    <configuration name="dockergradle [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Spring Boot.DockerGradleApplication">
+    <configuration name="HelloServiceTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.nju.service.HelloServiceTest.test&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="HelloServiceTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.nju.service.HelloServiceTest.test2&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="dockergradle [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -180,7 +220,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="check" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,7 +230,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="dockergradle [docker]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="dockergradle [processResources]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -201,7 +241,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="docker" />
+            <option value="processResources" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -211,7 +251,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="dockergradle [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="dockergradle [projects]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -222,49 +262,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jacocoTestCoverageVerification" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="dockergradle [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jacocoTestReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="dockergradle [sonarqube]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="sonarqube" />
+            <option value="projects" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -290,11 +288,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.dockergradle [sonarqube]" />
-        <item itemvalue="Gradle.dockergradle [docker]" />
-        <item itemvalue="Gradle.dockergradle [build]" />
-        <item itemvalue="Gradle.dockergradle [jacocoTestReport]" />
-        <item itemvalue="Gradle.dockergradle [jacocoTestCoverageVerification]" />
+        <item itemvalue="Gradle.dockergradle [projects]" />
+        <item itemvalue="Gradle.dockergradle [processResources]" />
+        <item itemvalue="Gradle.dockergradle [check]" />
+        <item itemvalue="Gradle.HelloServiceTest.test2" />
+        <item itemvalue="Gradle.HelloServiceTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -317,7 +315,9 @@
       <workItem from="1628644296341" duration="558000" />
       <workItem from="1628732503895" duration="1510000" />
       <workItem from="1629082879206" duration="12797000" />
-      <workItem from="1629104214910" duration="21826000" />
+      <workItem from="1629104214910" duration="28901000" />
+      <workItem from="1629681277087" duration="3326000" />
+      <workItem from="1629711275382" duration="2589000" />
     </task>
     <task id="LOCAL-00001" summary="docker 初步配置成功">
       <created>1629094535017</created>
@@ -347,7 +347,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629271535211</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sonarqube 配置完成">
+      <created>1629283115706</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629283115706</updated>
+    </task>
+    <task id="LOCAL-00006" summary="sonarqube 配置完成">
+      <created>1629283166205</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629283166205</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +372,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -370,7 +411,8 @@
     <MESSAGE value="docker 修改邮箱" />
     <MESSAGE value="docker 基本调试成功" />
     <MESSAGE value="jacoco配置完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="jacoco配置完成" />
+    <MESSAGE value="sonarqube 配置完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="sonarqube 配置完成" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dockergradle$SpringBootApplicationTest.ic" NAME="SpringBootApplicationTest Coverage Results" MODIFIED="1629092884854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -1,0 +1,18 @@
+
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+  datasource:
+    druid:
+      url: jdbc:h2:mem:docker_gradle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
+      username: sa
+      password:
+
+mybatis:
+  configuration:
+    database-id: h2
