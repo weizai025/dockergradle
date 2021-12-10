@@ -57,8 +57,23 @@ dependencies {
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
     // @see https://spring.io/projects/spring-boot
     testCompile "org.springframework.boot:spring-boot-starter-test"
+
+
+    // database
+    runtimeOnly("com.h2database:h2")
+    runtimeOnly("mysql:mysql-connector-java")
+    implementation("org.liquibase:liquibase-core")
+    implementation("org.springframework:spring-jdbc")
+
     // https://mvnrepository.com/artifact/com.alibaba/fastjson
     implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.78'
+
+    // commons-csv
+    compile("org.apache.commons:commons-csv:1.8")
+
+    // apache commmons
+    compile("commons-io:commons-io:2.6")
+    compile("commons-beanutils:commons-beanutils:1.9.3")
 
 }
 
