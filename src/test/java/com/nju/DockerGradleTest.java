@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @date 2021/8/16 13:51
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class DockerGradleTest {
     @Test
     public void contextLoadTest() {
